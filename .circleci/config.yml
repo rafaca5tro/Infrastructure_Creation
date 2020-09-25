@@ -11,8 +11,7 @@ jobs:
           command: |
             aws cloudformation deploy \
               --template-file template.yml \
-              --parameters parameters.json \
-              --stack-name udacity_complete_infra
+              --stack-name udacity_simple
 workflows:
   my_workflow:
     jobs:
