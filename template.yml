@@ -1,16 +1,18 @@
 Resources:
-Ec2Instance:
- Type: 'AWS::EC2::Instance'
- Properties:
+
+  Ec2Instance:
+    Type: 'AWS::EC2::Instance'
+  Properties:
    SecurityGroups:
-     - !Ref InstanceSecurityGroup
+      - !Ref InstanceSecurityGroup
    KeyName: udacity
    ImageId: 'ami-06e54d05255faf8f6' 
-InstanceSecurityGroup:
- Type: AWS::EC2::SecurityGroup
- Properties:
-   GroupDescription: Enable SSH access via port 22
-   SecurityGroupIngress:
+   
+  InstanceSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+  Properties:
+    GroupDescription: Enable SSH access via port 22
+    SecurityGroupIngress:
      - IpProtocol: tcp
        FromPort: '22'
        ToPort: '22'
