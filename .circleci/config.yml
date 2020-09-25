@@ -11,7 +11,7 @@ jobs:
           command: |
             aws cloudformation deploy \
               --template-file template.yml \
-              --stack-name udacity_simple
+              --stack-name udacityX
 workflows:
   my_workflow:
     jobs:
